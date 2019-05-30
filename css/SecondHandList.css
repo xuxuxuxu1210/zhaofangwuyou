@@ -1,0 +1,285 @@
+.secondSearch{
+    width: 2.9rem;
+    margin: 0.1rem auto;
+    position: relative;
+}
+.secondSearch input{
+    width: 2.9rem;
+    height: 0.41rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #cccccc;
+    padding-left: 0.1rem;
+    font-size: 0.12rem;
+}
+.secondSearch span{
+    position: absolute;
+    top: 0.12rem;
+    right: 0.5rem;
+}
+.secondSearch a{
+    position: absolute;
+    top: 0.12rem;
+    right: 0.18rem;
+}
+.secondSearch a img{
+    width: 0.18rem;
+    height: 0.2rem;
+}
+.secondTop .table{
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.12rem;
+    z-index: 4;
+    position: relative;
+    background: #FFF;
+}
+.secondTop .table li{
+    position: relative;
+}
+.secondTop .table h2 a{
+    position: relative;
+}
+.secondTop .table h2 span{
+    border-top: 5px solid #ccc;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    top: 0.06rem;
+    right: -0.14rem;
+}
+.secondTop .table h2 .active span{
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #ff8a00;
+    border-left: 5px solid transparent;
+    top: 0.02rem;
+}
+.secondTop .table h2 .active{
+    color: #ff8a00;
+}
+/*遮罩层*/
+.navTop{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.tableTop{
+    width: 100%;
+    position: fixed;
+    top: 0.4rem;
+    left: 0;
+    z-index: 10;
+}
+.tb{
+    display: flex;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    font-size: 0.12rem;
+    display: none;
+}
+.tb .navCenter{
+   flex: 1;
+    background: #f0f0f0;
+    border-right: 1px solid #cccccc;
+    font-size: 0.12rem;
+    text-align: center;
+}
+.tb .navCenter h2{
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+.tb .navCenter .active{
+    color: #ff8a00;
+    background: #fff;
+    margin-right: -1px;
+    border-right: 2px solid #fff;;
+}
+.tb .navBottom{
+    flex: 3;
+}
+.tb .navBottom ul li{
+    float: left;
+    width: 45%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+.tb .navBottom ul li .active{
+    color: #ff8a00;
+}
+.tbLeft{
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    font-size: 0.12rem;
+    display: none;
+}
+.tbLeft li{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-bottom: 1px solid #ccc;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+.tbLeft li:last-of-type{
+    border-bottom: none;
+}
+.tbCenter{
+    background: #fff;
+    padding-bottom: 0.2rem;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 3;
+    font-size: 0.12rem;
+    display: none;
+}
+.tbCenter li{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-bottom: 1px solid #ccc;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+.tbCenter li:last-of-type{
+    border-bottom: none;
+}
+.tbCenter span{
+    width: 0.14rem;
+    height: 0.15rem;
+    float: right;
+    margin-top: 0.12rem;
+    margin-right: 0.2rem;
+    border: 1px solid #c5c3c3;
+}
+.tbCenter span.active{
+    border: 1px solid #ff8a00;
+    background: url("../image/SecondHandList/ok.png") center center no-repeat;
+}
+.tbCenter  .btnOK{
+    text-align: center;
+    background: #ff8a00;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+}
+.tbRight{
+    background: #fff;
+    width: 100%;
+    padding: 0 0.2rem 0.2rem;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    font-size: 0.12rem;
+    display: none;
+}
+.tbRight h3{
+    padding: 0.2rem 0 0.12rem 0;
+    font-size: 0.14rem;
+}
+.tbRight .tableCenter{
+    padding-bottom: 0.08rem;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+.tbRight .tableCenter li{
+    float: left;
+    width: 22%;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    border: 1px solid #cccccc;
+    text-align: center;
+    margin-left: 0.05rem;
+    margin-bottom: 0.12rem;
+    height: 0.25rem;
+    line-height: 0.25rem;
+    font-size: 0.1rem;
+}
+.tbRight .tableCenter li:first-of-type,.tbRight .tableCenter li:nth-of-type(5),.tbRight .tableCenter li:nth-of-type(9){
+    margin-left: 0;
+}
+.tbRight .clear{
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+}
+.tbRight .btnOK{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-align: center;
+    background: #ff8a00;
+}
+.tbRight .btnOK a{
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.tableFoot{
+    padding: 0 0.2rem;
+    font-size: 0.12rem;
+}
+.tableFoot li{
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #ff8a00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tableFoot li:last-of-type{
+    border-bottom: none;
+}
+.tableFoot .left img{
+    width: 0.81rem;
+    height: 0.81rem;
+}
+.tableFoot .right{
+    width: 1.87rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+.tableFoot .right h2{
+    font-size: 0.14rem;
+}
+.tableFoot .right p{
+     color: #b0b0b0;
+     line-height: 0.21rem;
+ }
+.tableFoot .right p:first-of-type{
+    color: #000;
+    margin-top: 0.1rem;
+}
+.tableFoot .right strong{
+    color: #ff8a00;
+}
+
+
+

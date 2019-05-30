@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>找房无忧-登录</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/rentalList.css"/>
+</head>
+<body>
+<!--头部-->
+<header>
+    <h1><a href="index.html"><img src="image/index/logo.jpg" alt=""/></a></h1>
+    <div class="head">
+        <a href="my.html"><img src="image/index/my.jpg" alt=""/></a>
+        <a href="#"><img src="image/index/xiazai.jpg" alt=""/></a>
+    </div>
+</header>
+<section>
+    <h2>找房无忧登录</h2>
+    <div class="nav">
+        <span>账号</span>
+        <input class="user" type="text" required placeholder="账号"/>
+    </div>
+    <div class="nav">
+        <span>输入密码</span>
+        <input class="pass" type="password" required placeholder="输入密码"/>
+    </div>
+    <p class="tp">点击登录，表示您同意1号店 <a href="#">《服务协议》</a></p>
+    <button class="button">同意协议并登录</button>
+</section>
+<!--版权底部-->
+<footer class="foot">
+    <h2>北京找房无忧 > 首页</h2>
+    <div class="content">
+        <ul>
+            <li>
+                <img src="image/index/apple.png" alt=""/>
+                <div>
+                    <p>iPhone</p>
+                    <p>客户端</p>
+                </div>
+            </li>
+            <li>
+                <img src="image/index/android.png" alt=""/>
+                <div>
+                    <p>Android</p>
+                    <p>客户端</p>
+                </div>
+            </li>
+        </ul>
+        <div class="bom">
+            <p>北京找房无忧房地产经纪公司</p>
+            <p>网络经营许可证京ICP备20160812号</p>
+        </div>
+    </div>
+</footer>
+<script src="js/rem.js"></script>
+<script src="js/zepto.js"></script>
+</body>
+</html>
+<script>
+    $(function () {
+        $(".button").on("click",function () {
+            $.ajax({
+                url:"https://www.apiopen.top/login?key=00d91e8e0cca2b76f515926a36db68f5",
+                dataType:"json",
+                data:{
+                    phone:$(".user").val(),
+                    passwd:$(".pass").val()
+                },
+                type:"POST",
+                success:function (a) {
+                    console.log(a);
+                    if (a.code===200) {
+                        alert("登录成功");
+                        setTimeout(function () {
+                            window.location.href="index.html"
+                        },1000)
+                    }else {
+                        alert("用户或密码错误");
+                    }
+                },
+                err:function (e) {
+                    throw e;
+                }
+            })
+
+        });
+    });
+
+</script>
